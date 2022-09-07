@@ -6,14 +6,8 @@
 import math
 
 def count_mul(list):
-    result_list = []
     max_index = math.ceil(len(list) / 2)
-
-    for i in range(max_index):
-        mul = list[i] * list[-i - 1]
-        result_list.append(mul)
-
-    return result_list
+    return [list[i] * list[-i -1] for i in range(max_index)]
 
 #in_list = [2, 3, 5, 6]
 in_list = [2, 3, 4, 5, 6]

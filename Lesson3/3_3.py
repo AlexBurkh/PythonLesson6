@@ -1,19 +1,10 @@
 # Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 # Пример:
-# [1.1, 1.2, 3.1, 5, 10.01] => 0.19
-
-import math
-
+# [1.1, 1.2, 3.1, 5.1, 10.01] => 0.2
 
 def count_max_def(list):
-    fractionals = []
-    for item in list:
-        fractionals.append(round(item - int(item), 5))
-    max_item = max(fractionals)
-    min_item = min(fractionals)
-    return max_item - min_item
+    fractionals = [round(item - int(item), 5) for item in list]
+    return max(fractionals) - min(fractionals)
 
-
-in_list = [1.1, 1.2, 3.1, 5.4, 10.01, 5.9]
-
+in_list = [1.1, 1.2, 3.1, 5, 10.01]
 print(count_max_def(in_list))
