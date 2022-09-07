@@ -12,10 +12,7 @@ def print_equation(order : int, coefficients : list):
     print(line)
 
 def generate_coefficients(k):
-    coeficients = []
-    for i in range(1, k + 2):
-        coeficients.append(randint(0, 100))
-    return coeficients
+    return [randint(0, 100) for i in range(1, k + 2)]
 
 #k = input("Введите требуемую степень многочлена: ")
 k = 3
